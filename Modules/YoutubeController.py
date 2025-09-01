@@ -38,6 +38,6 @@ class YoutubeMusic:
             for i in range(len(self.FilteredSongs)):
                 try:
                     print(f"Total Songs: {len(self.FilteredSongs[i])}.")
-                    return self.Youtube.add_playlist_items(playlist, self.FilteredSongs[i])
+                    return self.Youtube.add_playlist_items(playlist, self.FilteredSongs[i], duplicates=True)
                 except Exception as e:
                     print(e)
